@@ -1,0 +1,116 @@
+:root {
+    --main-bg: #ffffff;
+    --text-color: #2d3436;
+    --accent-color: #6c5ce7; /* Um roxo moderno para design */
+    --border-color: #dfe6e9;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background-color: #f0f2f5;
+    color: var(--text-color);
+    margin: 0;
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.resume-container {
+    background-color: var(--main-bg);
+    width: 100%;
+    max-width: 850px;
+    padding: 50px;
+    border-radius: 4px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+}
+
+header {
+    text-align: left;
+    border-left: 8px solid var(--accent-color);
+    padding-left: 20px;
+    margin-bottom: 40px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 32px;
+    letter-spacing: -1px;
+}
+
+.contact-info, .links {
+    margin: 8px 0;
+    font-size: 15px;
+    color: #636e72;
+}
+
+a {
+    color: var(--accent-color);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+h2 {
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-bottom: 2px solid var(--border-color);
+    margin-top: 30px;
+    margin-bottom: 15px;
+    color: var(--accent-color);
+}
+
+.exp-header {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.experience-item, .edu-item {
+    margin-bottom: 20px;
+}
+
+ul {
+    margin: 8px 0;
+    padding-left: 18px;
+}
+
+li {
+    margin-bottom: 5px;
+}
+
+.grid-columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+.references {
+    font-size: 14px;
+    color: #b2bec3;
+    text-align: center;
+    margin-top: 40px;
+}
+
+#downloadBtn {
+    display: block;
+    margin: 40px auto 0;
+    padding: 12px 25px;
+    background: var(--accent-color);
+    color: white;
+    border: none;
+    border-radius: 25px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+#downloadBtn:hover {
+    transform: scale(1.05);
+}
+
+@media print {
+    #downloadBtn { display: none; }
+    body { background: white; padding: 0; }
+    .resume-container { box-shadow: none; max-width: 100%; padding: 20px; }
+}
